@@ -1,0 +1,167 @@
+
+* { 
+    /* een *-selector geeft aan dat het voor de hele pagina geldt. */
+    margin: 0; /* hiermee zorg je dat elk element 0 margin heeft van zichzelf */
+    padding: 0; /* hiermee zorg je dat elk element 0 padding heeft van zichzelf */
+    
+}
+
+body{
+    background-color: #f4f4f4;
+    color: #555;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+
+    /* Same as above */
+
+    font: normal 16px Arial, Helvetica, sans-serif;
+
+    line-height: 1.6em; /* hierdoor komt er meer of minder ruimte tussen de regels */
+    margin: 0; /* Hiermee zorg je dat witruimte aan zijkanten van een box verdwijnen */
+}
+
+a {
+    /* hiermee zorg je dat alle links op je pagina een bepaalde styling krijgen */
+   text-decoration: none; 
+   color: #000;
+}
+
+a:hover {
+    /* hiermee zorg je dat een bepaalde staat van de link gestyled wordt */
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+
+.container{
+    /* Deze container zorgt ervoor dat de box erin schaalt bij kleiner of groter wordend scherm */
+    width: 80%; /* een percentage hier ipv px zorgt ervoor dat het blok schaalbaar wordt */
+    margin: auto; 
+    /* containers wil je meestal in het midden uitgelijnd hebben en zet daarom op 'auto' */
+
+}
+
+.box-1{
+    background-color: #333;
+    color: #fff;
+    border: 5px red solid;
+    
+    /* voorbeelden zijn ook:
+    border-width: 3px;
+    border-bottom-width: 10px;
+    border-top-style: dotted;
+    */
+
+    padding: 20px; /* dit is de ruimte tussen de tekst en de rode lijn */
+    margin-top: 20px 0; /* dit is de ruimte buiten de rode lijn: 20 px boven en beneden, 0px rechts en links */
+
+}.box-1 h1 { /* hiermee stijl je specifiek de h1 binnen de container */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1em;
+}
+
+.box-2 {
+    border: 3px dotted #ccc;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.categories {
+    border: 1px #ccc solid;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.categories ul {
+    list-style: none;
+    padding-left: 30px; /* hiermee duw je de list items naar binnen */
+}
+
+.categories h2 {
+    text-align: center;
+}
+
+.categories li {
+    padding-bottom: 6px;
+    border-bottom: 1px #333;
+    list-style-image: url('checkbox.png'); /* hiermee kun je een afbeelding naast het list-item zetten */
+}
+
+.my-form {
+    padding: 20px;
+}
+
+.my-form .form-group{
+    padding-bottom: 15px;
+}
+
+.my-form label {
+    display: block; /* dit zorgt ervoor dat het invulveld onder de tekst komt.
+                        Een invulveld is namelijk een inline element */
+    
+}
+
+.my-form input[type="text"], .my-form textarea { 
+    padding: 8px;
+    width: 100%;
+    /* Hiermee maak je het invulveld van name en email breder. Message niet
+    want dat is geen input veld maar een text-area. De toevoeging van [type="text"]
+    zorgt ervoor dat het alleen om de tekstvelden gaat. De submit button is geen
+    type="test" maar type="submit */
+}
+
+.my-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+
+    /* hiermee style je de button. mocht je vaker knoppen gebruiken op je website, 
+    maak er dan een global class van je je op alle buttons gebruikt. Geef de button
+    bijv. de class .button met dezelfde properties. Dat ziet er dan zo uit: 
+    .button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+    } */
+}
+
+.block { 
+    float: left;
+    width: 100%;
+        /* dit zorgt ervoor dat de drie div's naast elkaar in columns komen te staan.
+    Je moet hier altijd een width zetten anders komen ze niet naast elkaar. In dit
+    geval 33.3% omdat het drie columns zijn */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box; /* dit zorgt ervoor dat de padding en border binnen die
+    33.3% blijven. Zonder deze property komt padding en border erbij op waardoor
+    de drie columns niet naast elkaar komen. */
+    
+}
+
+@media (min-width: 1024px) {
+    .block {
+        width: 31.5%;
+    }
+
+    body {
+        background-color: dimgray;
+        color: #ccc;
+        font-size: 0.75em;
+        line-height: 2em;
+    }
+}
+
