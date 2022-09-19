@@ -44,10 +44,53 @@
                 <input type="text" name="email">
             </div>
             <div class="form-group">
-                <label>Message: </label>
+                <label>Telephone number: </label>
+                <input type="tel" name="telephone">
+            </div>
+            <div class="form-group">
+                <label>Telephone number: </label>
+                <input type="tel" name="telephone">
+            </div>
+            <div class="form-group">
+                <label>Age: </label>
+                <input type="number" name="age">
+            </div>
+            <div class="form-group">
+                <label>Date of bitrh: </label>
+                <input type="date" name="date-of-birth">
+            </div>
+            <div class="form-group">
+                <h3>Gender: </h3>
+                <label for="male1">Male <input type="radio" id="male1" name="btn" value="male"></label>
+                <label for="famel1">Female <input type="radio" id="female1" name="btn" value="female"></label>
+            </div>
+            <div class="form-group">
+                <h3>Favorite cuisine:</h3>
+                <label>French <input type="checkbox" id="french1" name="cuisine" value="french"></label>
+                <label>Italian <input type="checkbox" id="italian1" name="cuisine" value="italian"></label>
+                <label>Spanish <input type="checkbox" id="spanish1" name="cuisine" value="spanish"></label>
+                <label>Arabic <input type="checkbox" id="arabic1" name="cuisine" value="arabic"></label>
+            </div>
+            <div class="form-group">
+                <h3>What's your favorite color:</h3>
+                <input type="color" id="head" name="head" value="#e66465">
+                <label for="head">Kies een kleur</label>    
+            </div>
+            <div class="form-group">
+                <label>Biography: </label>
                 <textarea name="message"></textarea>
             </div>
-            <input class="button" type="submit" value="submit" name="">
+            <div class="form-group">
+                <label for="recipe">Upload your favorite recipe:</label>
+                <input type="file" id="recipe" name="recipe" accept=".pdf, .jpg, .doc">
+            </div>
+            <div class="form-group">
+                <label for="url">URL to recipe website:</label>
+                <input type="url" name="url" id="url" placeholder="https://example.com" 
+                pattern="https://.*" size="30" required>
+            </div>
+            <input class="button" type="reset" value="reset" name="button">
+            <input class="button" type="submit" value="submit" name="button">
         </form>
 
         <div class="block">
